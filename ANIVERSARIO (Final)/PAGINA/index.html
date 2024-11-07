@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="icon" href="https://brandslogos.com/wp-content/uploads/images/audi-logo-vector.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <title>Audi</title>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+
+
+html, body{
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
+
+
+header {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+
+/* Video de fondo */
+#background-video {
+    transform: translateY(-80px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Contenedor del contenido */
+.header-content {
+    position: absolute;
+    font-family: "Bruno Ace", sans-serif;
+    /* text-shadow: 2px 0px 2px  white; */
+    top: 50%;
+    left: 35%;
+    width: 800px;
+    transform: translate(-50%, -50%);
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+
+.header-content h1 {
+    font-size: 4rem;
+}
+
+.header-content button {
+    padding: 5px;
+    color: white;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    transition: all ease-in-out 0.3s;
+
+}
+
+.header-content button:hover{
+    border-color: rgba(255, 255, 255, 0.61);
+    color: rgba(255, 255, 255, 0.61);
+    backdrop-filter: blur 15%;
+    background-color: rgba(255, 255, 255, 0.048);
+    transition: all ease-in-out 0.3s;
+}
+
+/* ------------------------------------------------------------------------- */
+
+.navi{
+    align-items: center;
+    display: flex;
+    background-image: linear-gradient(0, #ffffff18, #ffffff00);
+    z-index: 999;
+    position: relative;
+}
+
+.navi a{
+    margin: auto;
+    z-index: 999;
+}
+
+.icon1{
+    padding: 20px;
+    font-size: 1.5em;
+    z-index: 999;
+}
+
+.btn-primary{
+background-color: transparent;
+font-size: 2em;
+width: 80px;
+height: 80px;
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 0;
+box-shadow: none;
+z-index: 999;
+
+}
+
+
+
+.btn-primary:hover{
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+}
+
+.offcanvas-end{
+    width: 300px;
+    height: 100vh;
+    background-color: #292929;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "Scada", sans-serif;
+  font-size: 5em;
+  
+}
+
+/* Estilos del botón */
+.dropdown-button {
+  text-align: left;
+  background-color: #007bff00;
+  margin: auto;
+  width: 260px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all ease-in-out 0.3s;
+  padding: 30px;
+  
+}
+
+.dropdown-button:hover{
+    background-color: #3b3b3b;
+    transition: all ease-in-out 0.3s;
+
+}
+
+/* Contenido del dropdown (inicialmente oculto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+  transition: all ease-in 0.4s;
+
+}
+
+/* Estilos para los enlaces del dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  background-color: #363636;
+}
+
+.dropdown-content a:hover {
+  background-color: #202020;
+}
+
+/* Mostrar el dropdown al hacer clic en el botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.logo img{
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+.btn-primary:focus{
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+  
+.icon1{
+    color: rgb(255, 255, 255);
+}
+
+/* ------------------------------------------------------------------------- */
+
+.contenedor{
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 500px;
+    height: 530px;
+   text-align: center;
+   border: 1px solid white;
+   margin-bottom: 120px;
+   /* background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-6u_GktB7jpBIrnw0ANC5AfyZFxWDGvY3bxbj4_6LkHxbLHGR7RYwmwAPd9LGCCTsuE&usqp=CAU); */
+   /* background-repeat: no-repeat; */
+   /* background-size: cover; */
+}
+
+.contenedor img{
+    display: flex;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.Modelo h1{
+    font-family: "Bruno Ace", sans-serif;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+.Modelo button{
+    font-family: "Bruno Ace", sans-serif;
+    font-size: 0.7em;
+    margin: 20px;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    transition: all ease-in-out 0.3s;
+
+}
+
+.Modelo h2,h3{
+    font-family: "Bruno Ace", sans-serif;
+    color: white;
+}
+
+.baner{
+    margin-top: 30px;
+    background-color: gray;
+    width: 100%;
+    height: 70px;
+    transition: background-color 0.5s ease;
+}
+
+.txt{
+    font-family: "Scada", sans-serif;
+    color: white;
+}
+
+.botones{
+    margin: auto;
+    height: 40px;
+    width: 250px;
+}
+
+.botones button{
+    margin: 0 10px;
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.589); 
+    transition: all 0.2s ease-in;
+}
+
+.botones button:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.158); 
+    transition: all 0.2s ease-in;
+}
+
+button.gris{
+    background-color: rgb(155, 155, 155);
+}
+
+button.amarillo{
+    background-color: yellow;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+
+
+.tt2{
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  font-family: "Bruno Ace", sans-serif;
+  margin-bottom: 100px;
+  padding: 50px;
+
+}
+
+
+.collage {
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 10px;
+  width: 80vw;
+  height: 80vh;
+}
+
+.collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.medium {
+  grid-column: span 2;
+}
+
+.small {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+
+/* ------------------------------------Contenedores-------------------------------------------- */
+
+
+
+
+.contenedores{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  width: 160vh;
+  margin-bottom: 200px;
+}
+
+.carta1{
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/audi-a7-sportback-tfsie-portada-1634823683.jpg);
+  background-repeat: no-repeat;
+  background-size: 1450px;
+  background-position: center;
+  height: 800px;
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: all ease-in-out 0.4s;
+}
+
+
+.carta1:hover{
+  background-size: 1500px;
+  transition: all ease-in-out 0.4s;
+
+}
+
+.carta1 p{
+  margin-top: 400px;
+}
+
+.carta2{
+  background-image: url(https://hips.hearstapps.com/hmg-prod/images/audi-e-tron-gt-2025-prueba-02-66e9100098a65.png?crop=0.6232827187274042xw:1xh;center,top&resize=1200:*);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1400px;
+  height: 800px;
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: all ease-in-out 0.4s;
+
+}
+
+
+.carta2:hover{
+  background-size: 1500px;
+  transition: all ease-in-out 0.4s;
+
+}
+
+
+.carta2 p{
+  margin-top: 400px;
+}
+
+
+.carta3{
+  background-image: url(https://carnovo.com/wp-content/uploads/2024/03/audi-a3-2024-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px;
+  height: 800px;
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: all ease-in-out 0.4s;
+
+}
+
+
+.carta3:hover{
+  background-size: 1700px;
+  transition: all ease-in-out 0.4s;
+
+}
+
+
+.carta3 p{
+  margin-top: 400px;
+}
+
+
+
+.carta4{
+  background-image: url(https://soymotor.com/sites/default/files/imagenes/noticia/audi-rs-etron-gt-soymotor-05.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1400px;
+  height: 800px;
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  transition: all ease-in-out 0.4s;
+
+}
+
+
+.carta4:hover{
+  background-size: 1500px;
+  transition: all ease-in-out 0.4s;
+
+}
+
+
+.carta4 p{
+  margin-top: 400px;
+}
+
+
+/* -----------------PIE DE PAGINA---------------------------------------------------------- */
+
+.footer {
+  font-family: "Scada", sans-serif;
+  position: relative;
+  background-color: #ffffff1c; /* Fondo oscuro */
+}
+
+.footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footer p, .footer a {
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  background-color: #0d1214; /* Color ligeramente más oscuro para la parte inferior */
+}
+
+.footer .social-icons i {
+  font-size: 1.5rem;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8; /* Transparencia para el logo de fondo */
+}
+
+.logo-img {
+  max-width: 200px; /* Tamaño máximo del logo */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+    </style>
+
+</head>
+<body>
+<nav class="navi">
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
+    <a href="index.html"><img src="https://logodownload.org/wp-content/uploads/2016/11/audi-logo-11.png" height="50px"></a>
+    <span class="icon1"><i class="bi bi-person-fill"></i></span>
+</nav>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Más sobre nosotros</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="dropdown">
+            <button class="dropdown-button">Modelos</button>
+        
+            <div class="dropdown-content">
+              <a href="#"><img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grj9iFefFL29_VmB0_UDCHQ7Ux1u6INgMrUBejOJBgYQQSfD-ABIcrA5gEmRcDIo6C-EzmzAwMrBVARiQDCPDxlRblFCQWJebqlWemlGQIahgQCYTZXVxDHD19ggE1wa116QAAAA?wid=550" width="230px">
+              <p>Audi A7 Sportback</p></a>
+              <a href="#"><img src="https://uploads.audi-mediacenter.com/system/production/cars/901/photos/ccd83dfd8b2cf1304e2117bf7cd4b495e4cbf61f/web_1440_S_e-tron_GT.png?1718636561" width="230px">
+                <p>Audi E-Tron GT</p></a>
+              <a href="#"><img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT6DKIatnf9e8-ONtzV1wMk-RdbNiOgMrUBfjJSDBIgIk-KKABEc4A5gEmbcQRJwE8ZnMmRkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMA_qQ2bukAAAA?wid=550" width="230px" alt="">
+                <p>Audi A3</p></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            
+            <button class="dropdown-button">Más Productos</button>
+        
+        
+            <div class="dropdown-content">
+              <a href="#">Llaveros</a>
+              <a href="#">Ropa</a>
+              <a href="#">Camionetas</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+    
+            <button class="dropdown-button">Contactos</button>
+        
+            
+            <div class="dropdown-content">
+              <a href="https://www.instagram.com/gill_brw_22/">Instagram</a>
+              <a href="contacto.html">Contactanos</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+
+            <button class="dropdown-button">Sucursales</button>
+        
+
+            <div class="dropdown-content">
+              <a href="#">Apodaca</a>
+              <a href="#">Monterrey</a>
+              <a href="#">Linares</a>
+            </div>
+          </div>
+        
+      </div>
+
+
+      <div class="logo">
+        <img src="https://logodownload.org/wp-content/uploads/2016/11/audi-logo-11.png" width="120px">
+      </div>
+
+    </div>
+
+
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="recursos/Audi ‐ Hecho con Clipchamp.mp4">
+            Tu navegador no soporta la etiqueta de video.
+        </video>
+    </div>
+    <div class="header-content">
+        <h1 class="medium">Powerfull</h1>
+        <a href="#Modelos" class="big"><button>Descubre más</button></a>
+    </div>
+    
+    
+
+    <section id="Modelos" class="Modelo">
+        <h1>MODELOS</h1>
+        <div class="contenedor" id="cont">
+            <img src="recursos/audi-removebg-preview.png" width="500px" id="imagenChange" class="image">
+            <p id="texto" class="txt">Audi R8 Coupé - Metalico</p>
+            <div class="botones">
+                <button class="gris" onclick="texto.innerText= 'Audi R8 Coupé - Metalico', colorc('gris')"></button>
+                <button class="amarillo" onclick="texto.innerText= 'Audi R8 Coupé - Amarillo', colorc('amarillo')"></button>
+            </div>
+            <h2>AUDI R8 COUPÉ</h2>
+            <a href="contacto.html"><button>Compra Ahora</button></a>
+            <h3>MXN 1,400,000*</h3>
+            <div class="baner" id="ban"></div>
+        </div>
+
+
+
+
+
+
+        <div class="contenedores">
+          <div class="carta1">
+            <img src="https://driversecustom.com/cdn/shop/products/IMG_0140.png?v=1659026019&width=1946" width="90px" alt="imagen">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A itaque, odit ad consequatur tempore iusto architecto accusamus quas perferendis, dolore ex saepe voluptate veritatis libero aut at reprehenderit aspernatur ipsam.</p>
+            <h3>Audi A7 Sportback</h3>
+            <a href="contacto.html"><button>Comprar Ahora 🛒</button></a>
+
+          </div>
+
+          <div class="carta2">
+            <img src="https://logodix.com/logo/2106465.png" width="150px" alt="imagen">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit similique iure debitis dicta assumenda ut sed unde vitae obcaecati a sapiente harum tempora inventore necessitatibus, quaerat quos ullam cum cumque.</p>
+            <h3>Audi E-Tron GT</h3>
+            <a href="contacto.html"><button>Comprar Ahora 🛒</button></a>
+          </div>
+
+          </div>
+
+
+          <div class="contenedores">
+
+
+            <div class="carta3">
+              <img src="https://driversecustom.com/cdn/shop/products/IMG_0138.png?v=1659026052&width=1946" width="90px" alt="imagen">
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis laudantium laborum animi ipsam, numquam placeat voluptate eius sapiente, aliquid, blanditiis eum mollitia commodi suscipit labore vel harum dolor aspernatur earum.</p>
+              <h3>Audi A3</h3>
+              <a href="contacto.html"><button>Comprar Ahora 🛒</button></a>
+  
+            </div>
+  
+            <div class="carta4">
+              <img src="https://logodix.com/logo/2106465.png" width="150px" alt="imagen">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo qui velit rem praesentium aperiam expedita, recusandae quia commodi, et reprehenderit voluptas. Dolorum amet in eligendi eos cum adipisci neque ab.</p>
+              <h3>Audi RS	e-tron GT </h3>
+              <a href="contacto.html"><button>Comprar Ahora 🛒</button></a>
+
+
+
+          </div>
+
+        </div>
+
+
+
+        <h1 class="tt2">Galeria</h1>
+
+
+
+        <div class="collage">
+            <img src="https://www.vepersa.audi.es/content/dam/iph/international/es/general_assets/blueprint/master/models/r8/r8-spyder-v10-performance-rwd/stage/header-audi-r8-spyder-performance-v10-rwd-1400x438.jpg/_jcr_content/renditions/cq5dam.thumbnail.640.360.iph.hero.png?imwidth=320&imdensity=1" alt="Imagen 1" class="big">
+            <img src="https://media.audifrance.fr/wp-content/uploads/2022/10/8973fac5604452b8061afdd46ccdf825-2000x1500.jpg" alt="Imagen 2" class="small">
+            <img src="https://acnews.blob.core.windows.net/imgnews/paragraph/NPAZ_66ca8c903ca1490a932b763667524cac.webp" alt="Imagen 3" class="medium">
+            <img src="https://www.audi.com.do/content/dam/nemo/models/r8/r8-coupe-v10-performance-rwd/my-2022/stage/1920x1080-r8-coupe-v10-performance-rwd-rear-R8_2021_3003.jpg?width=768" alt="Imagen 4" class="small">
+            <img src="https://alden.mx/wp-content/uploads/2023/06/R8-a-1024x576.jpg" alt="Imagen 5" class="medium">
+            <img src="https://uploads.audi-mediacenter.com/system/production/media/74398/images/4cd3780a2c7db28224642e3d1d72a979610f965a/A192339_web_2880.jpg?1698356915" alt="Imagen 6" class="medium">
+          </div>
+          <script src="https://unpkg.com/scrollreveal@4"></script>
+
+
+
+    </section>
+
+
+    <footer class="footer text-white">
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-md-4">
+              <h5>Sobre Nosotros</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec massa vel felis ultricies aliquam non a augue. Suspendisse potenti.</p>
+            </div>
+            <div class="col-md-4">
+              <h5>Navegación</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Modelos</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+                <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <h5>Contáctanos</h5>
+              <p><i class="bi bi-geo-alt-fill"></i> Calle Enrredadera, Guadalupe, México</p>
+              <p><i class="bi bi-telephone-fill"></i> +811 691 3043</p>
+              <p><i class="bi bi-envelope-fill"></i> gilberto.morenor@uanl.edu.mx</p>
+              <div class="social-icons">
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com/gill_brw_22/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom text-center py-3">
+          <p>&copy; 2024 Audi. Todos los derechos reservados.</p>
+        </div>
+    
+        <div class="footer-logo">
+          <img src="https://www.carlogos.org/car-logos/audi-logo-2016-download.png" alt="Logo" class="logo-img">
+        </div>
+      </footer>
+
+
+
+    <script>
+		ScrollReveal().reveal('.small', { delay: 500, duration: 1000})
+		ScrollReveal().reveal('.medium', { delay: 1000, duration: 1500, origin: 'left', easing: 'cubic-bezier(0.5, 0, 0, 1)', distance: '10px',})
+		ScrollReveal().reveal('.big', { delay: 2000, duration: 1000, origin: 'bottom', distance: '15px' })
+	</script>
+
+
+    <script>
+        var colorChangeElement = document.getElementById("cont");
+        var imgChange = document.getElementById("imagenChange");
+        var banerChange = document.getElementById("ban");
+
+        function colorc(op){
+            switch(op){
+                case 'gris':
+                colorChangeElement.style.backgroundColor = ""
+                colorChangeElement.style.color = "white"
+                 banerChange.style.backgroundColor = "gray"
+                imgChange.src = "recursos/audi-removebg-preview.png";
+                document.getElementById('texto');
+                break;
+        
+                case 'amarillo':
+                colorChangeElement.style.backgroundColor = ""
+                colorChangeElement.style.color = "white"
+                 banerChange.style.backgroundColor = "yellow"
+                imgChange.src = "recursos/audi2-removebg-preview.png";
+                document.getElementById('texto');
+                break;
+            }
+        } 
+        
+            </script>
+
+</body>
+
+</html>

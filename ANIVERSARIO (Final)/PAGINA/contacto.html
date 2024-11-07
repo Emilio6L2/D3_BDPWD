@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <link rel="icon" href="https://brandslogos.com/wp-content/uploads/images/audi-logo-vector.svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Contactanos</title>
+
+    <style>
+
+      @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+body{
+    background-color: black;
+    scroll-behavior: smooth;
+    color: rgb(255, 255, 255);
+
+}
+
+.navi{
+    align-items: center;
+    display: flex;
+    background-image: linear-gradient(0, #ffffff18, #ffffff00);
+    z-index: 999;
+    position: relative;
+}
+
+.navi a{
+    margin: auto;
+    z-index: 999;
+}
+
+.icon1{
+    padding: 20px;
+    font-size: 1.5em;
+    z-index: 999;
+}
+
+.btn-primary{
+background-color: transparent;
+font-size: 2em;
+width: 80px;
+height: 80px;
+color: rgb(255, 255, 255);
+border: none;
+border-radius: 0;
+box-shadow: none;
+z-index: 999;
+
+}
+
+
+
+.btn-primary:hover{
+    background-color: rgb(253, 253, 253);
+    color: rgb(0, 0, 0);
+}
+
+.offcanvas-end{
+    width: 300px;
+    height: 100vh;
+    background-color: #292929;
+    color: rgba(255, 255, 255, 0.521);
+}
+
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "Scada", sans-serif;
+  font-size: 5em;
+  
+}
+
+/* Estilos del botón */
+.dropdown-button {
+  text-align: left;
+  background-color: #007bff00;
+  margin: auto;
+  width: 260px;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all ease-in-out 0.3s;
+  padding: 30px;
+  
+}
+
+.dropdown-button:hover{
+    background-color: #3b3b3b;
+    transition: all ease-in-out 0.3s;
+
+}
+
+/* Contenido del dropdown (inicialmente oculto) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+  transition: all ease-in 0.4s;
+
+}
+
+/* Estilos para los enlaces del dropdown */
+.dropdown-content a {
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  background-color: #363636;
+}
+
+.dropdown-content a:hover {
+  background-color: #202020;
+}
+
+/* Mostrar el dropdown al hacer clic en el botón */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+.logo img{
+    margin: auto;
+    padding: 10px;
+    display: flex;
+}
+
+.btn-primary:focus{
+  outline: none;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+}
+  
+.icon1{
+    color: rgb(255, 255, 255);
+}
+
+
+
+
+
+
+
+/* --------------------------------------------------------------------------------------------------- */
+
+        
+        .form-container {
+            font-family: "Bruno Ace", sans-serif;
+            margin-bottom: 200px;
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: rgba(0, 0, 0, 0.144);
+            backdrop-filter: blur(20px);
+            border: 1px solid white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-icon {
+            font-size: 1.2rem;
+            margin-right: 10px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .btn-custom {
+            font-family: "Bruno Ace", sans-serif;
+            background-color: #ff000000;
+
+            color: white;
+            border: 1px solid white;
+        }
+        .btn-custom:hover {
+            background-color: #ffffff52;
+            color: black;
+        }
+
+
+        /* -----------------PIE DE PAGINA---------------------------------------------------------- */
+
+.footer {
+  font-family: "Scada", sans-serif;
+  position: relative;
+  background-color: #ffffff1c; /* Fondo oscuro */
+}
+
+.footer h5 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.footer p, .footer a {
+  font-size: 0.9rem;
+}
+
+.footer-bottom {
+  background-color: #0d1214; /* Color ligeramente más oscuro para la parte inferior */
+}
+
+.footer .social-icons i {
+  font-size: 1.5rem;
+}
+
+.footer-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8; /* Transparencia para el logo de fondo */
+}
+
+.logo-img {
+  max-width: 200px; /* Tamaño máximo del logo */
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navi">
+        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
+        <a href="index.html"><img src="https://logodownload.org/wp-content/uploads/2016/11/audi-logo-11.png" height="50px"></a>
+        <span class="icon1"><i class="bi bi-person-fill"></i></span>
+    </nav>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+          <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel">Más sobre nosotros</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="dropdown">
+                <button class="dropdown-button">Modelos</button>
+            
+                <div class="dropdown-content">
+                  <a href="#"><img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grj9iFefFL29_VmB0_UDCHQ7Ux1u6INgMrUBejOJBgYQQSfD-ABIcrA5gEmRcDIo6C-EzmzAwMrBVARiQDCPDxlRblFCQWJebqlWemlGQIahgQCYTZXVxDHD19ggE1wa116QAAAA?wid=550" width="230px">
+                  <p>Audi A7 Sportback</p></a>
+                  <a href="#"><img src="https://uploads.audi-mediacenter.com/system/production/cars/901/photos/ccd83dfd8b2cf1304e2117bf7cd4b495e4cbf61f/web_1440_S_e-tron_GT.png?1718636561" width="230px">
+                    <p>Audi E-Tron GT</p></a>
+                  <a href="#"><img src="https://mediaservice.audi.com/media/fast/H4sIAAAAAAAAAFvzloG1tIiBOTrayfuvpGh6-m1zJgaGigIGBgZGoDhTtNOaz-I_2DhCHsCEtzEwF-SlMwJZKUycmbmJ6an6QD4_I3taTmV-aUkxO0grT6DKIatnf9e8-ONtzV1wMk-RdbNiOgMrUBfjJSDBIgIk-KKABEc4A5gEmbcQRJwE8ZnMmRkYWCuAjEgGEODjKy3KKUgsSszVK89MKckQ1DAgEgizu7iGOHr6BAMA_qQ2bukAAAA?wid=550" width="230px" alt="">
+                    <p>Audi A3</p></a>
+                </div>
+              </div>
+    
+              <div class="dropdown">
+                
+                <button class="dropdown-button">Más Productos</button>
+            
+            
+                <div class="dropdown-content">
+                  <a href="#">Llaveros</a>
+                  <a href="#">Ropa</a>
+                  <a href="#">Camionetas</a>
+                </div>
+              </div>
+    
+              <div class="dropdown">
+        
+                <button class="dropdown-button">Contactos</button>
+            
+                
+                <div class="dropdown-content">
+                  <a href="https://www.instagram.com/gill_brw_22/">Instagram</a>
+                  <a href="#">Facebook</a>
+                  <a href="#">Twitter</a>
+                </div>
+              </div>
+    
+              <div class="dropdown">
+    
+                <button class="dropdown-button">Sucursales</button>
+            
+    
+                <div class="dropdown-content">
+                  <a href="#">Apodaca</a>
+                  <a href="#">Monterrey</a>
+                  <a href="#">Linares</a>
+                </div>
+              </div>
+            
+          </div>
+    
+    
+          <div class="logo">
+            <img src="https://logodownload.org/wp-content/uploads/2016/11/audi-logo-11.png" width="120px">
+          </div>
+    
+        </div>
+
+
+
+
+    
+    <div class="container">
+        <div class="form-container">
+            <h2 class="text-center">Contáctanos</h2>
+            <form id="contactForm">
+                <div class="mb-3">
+                    <label for="name" class="form-label">
+                        <i class="bi bi-person-fill form-icon"></i> Nombre completo
+                    </label>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre completo" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        <i class="bi bi-envelope-fill form-icon"></i> Correo electrónico
+                    </label>
+                    <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">
+                        <i class="bi bi-telephone-fill form-icon"></i> Teléfono
+                    </label>
+                    <input type="tel" class="form-control" id="phone" placeholder="Tu número de teléfono" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">
+                        <i class="bi bi-chat-text-fill form-icon"></i> Mensaje
+                    </label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom w-100">Enviar mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+    
+    <script>
+        // JavaScript para manejar el envío del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita que se envíe el formulario de manera predeterminada
+            alert('¡El formulario se ha enviado exitosamente!');
+            this.reset(); // Resetea los campos del formulario
+        });
+    </script>
+
+</body>
+
+
+<footer class="footer text-white">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Sobre Nosotros</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nec massa vel felis ultricies aliquam non a augue. Suspendisse potenti.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Navegación</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Modelos</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Blog</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contáctanos</h5>
+          <p><i class="bi bi-geo-alt-fill"></i> Calle Enrredadera, Guadalupe, México</p>
+          <p><i class="bi bi-telephone-fill"></i> +811 691 3043</p>
+          <p><i class="bi bi-envelope-fill"></i> gilberto.morenor@uanl.edu.mx</p>
+          <div class="social-icons">
+            <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+            <a href="https://www.instagram.com/gill_brw_22/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom text-center py-3">
+      <p>&copy; 2024 Audi. Todos los derechos reservados.</p>
+    </div>
+
+    <div class="footer-logo">
+      <img src="https://www.carlogos.org/car-logos/audi-logo-2016-download.png" alt="Logo" class="logo-img">
+    </div>
+  </footer>
+
+
+</html>
